@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from "react"
-import { Modal } from './components/Modal';
+// import { Modal } from './components/Modal';
+import { ModalCadastro } from './components/ModalCadastro';
 
 function App() {
   const [open, setOpen] = useState<boolean>(false)
@@ -8,14 +9,10 @@ function App() {
   return (
     <div className="container">
 
-      <button onClick={ () => setOpen(!open) } > Clique aqui </button>
+      <button className='button22' onClick={ () => setOpen(!open) } > Cadastrar </button>
 
-      <Modal 
-        isOpen={open}
-        setOpen={setOpen}
-        title="Games 2023"
-        body="Sua Loja de Games 2023, Goiânia Goiás"
-      />
+      <ModalCadastro isOpen={open}  setOpen={setOpen} />
+
     </div>
   )
 }

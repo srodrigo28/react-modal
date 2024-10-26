@@ -7,9 +7,9 @@
     justify-content: center;
     flex-direction: column;
 
-    background-color: blueviolet;
+    background-color: #000;
 }
-button{
+.button22{
     color: #fff;
     font-size: 1.3em;
     background-color: #1d1d1d;
