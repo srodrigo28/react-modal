@@ -1,24 +1,21 @@
 import './styles.css';
-import { ModalCadastrar } from './components/ModalCadastrar';
-import { Navbar } from './components/Navbar';
+import { useState } from "react"
+import { Modal } from './components/Modal';
 
 function App() {
-  // const [open, setOpen] = useState<boolean>(false)
+  const [open, setOpen] = useState<boolean>(false)
 
   return (
     <div className="container">
-      <Navbar />
-      {/* <button onClick={ () => setOpen(!open) } > Clique aqui </button> */}
 
-      <ModalCadastrar />
+      <button onClick={ () => setOpen(!open) } > Clique aqui </button>
 
-
-      {/* <Modal 
+      <Modal 
         isOpen={open}
         setOpen={setOpen}
         title="Games 2023"
         body="Sua Loja de Games 2023, Goiânia Goiás"
-      /> */}
+      />
     </div>
   )
 }
