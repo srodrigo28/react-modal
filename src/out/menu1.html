@@ -9,7 +9,7 @@
     <header>
         <div class="container-menu">
             <p id="menu1" class="menu-feminino mark">Feminino</p>
-            <p id="menu2" class="menu-masculino">masculino</p>
+            <p id="menu2" class="menu-masculino">Masculino</p>
         </div>
         <ul class="item-feminino">
             <li>Best Friday</li>
@@ -34,6 +34,9 @@
         list-style: none;
         text-decoration: none;
     }
+    body{
+        background-color: blueviolet;
+    }
     header{
         display: flex;
         flex-direction: column;
@@ -56,9 +59,8 @@
         gap: 20px;
         display: flex;
         padding: 20px;
-        color: white;
         font-size: 1.5em;
-        background-color: red;
+        background-color: bisque;
 
         transition: .3s;
     }
@@ -69,9 +71,8 @@
     .item-masculino p{
         cursor: pointer;
     }
-    .mark{
-        color: white;
-        background-color: red;
+    .mark{  
+        background-color: bisque;
     }
    </style>
 
@@ -80,18 +81,16 @@
         var menu2 = document.getElementById('menu2')
 
         menu1.onmouseover = function(){
-            menu1.style.background = "red"
-            menu1.style.color = "white"
+            menu1.style.background = "bisque"
 
-            document.querySelector("#menu2").style.background = "transparent"
             document.querySelector("#menu2").style.color = "black"
             document.querySelector(".item-feminino").style.display = "flex"
             document.querySelector(".item-masculino").style.display = "none"
+            document.querySelector("#menu2").style.background = "transparent"
             
         }
         menu2.onmouseover = function(){
-            menu2.style.color = "white"
-            menu2.style.background = "red"
+            menu2.style.background = "bisque"
             document.querySelector(".item-masculino").style.display = "flex"
 
             document.querySelector("#menu1").style.color = "black"
