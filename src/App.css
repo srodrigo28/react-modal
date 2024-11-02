@@ -25,3 +25,23 @@
 .button22:hover{
     background-color: green;
 }
+.box-upload{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 2rem;
+}
+.btn99{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: green;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.input99{
+    display: none;
+}

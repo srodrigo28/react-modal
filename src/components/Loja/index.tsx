@@ -1,5 +1,6 @@
 
 import "./ModalCadastro.css"
+import { useState, useRef } from "react"
 
 interface IModal {
     isOpen: boolean;
@@ -7,6 +8,22 @@ interface IModal {
 }
 
 export function Loja({ isOpen, setOpen }: IModal) {
+    
+    const fileInputRef = useRef(null); // Usando useRef para referenciar o input
+
+    // Função que dispara o clique no input file
+    const handleButtonClick = () => {
+        fileInputRef.current?.click(); // Dispara o clique no input referenciado
+    };
+
+    // Função que lida com a seleção do arquivo
+    const handleFileChange = (event : any) => {
+        const file = event.target.files[0];
+        if (file) {
+        alert(`Salvando ... ${file.name}`);
+        }
+    };
+
     if (isOpen) {
         return (
             <div className="container">
@@ -14,7 +31,8 @@ export function Loja({ isOpen, setOpen }: IModal) {
 
                     <main className="main-container">
                         <section className="product-image">
-                        <button id="addImage" > + </button>
+                        <button id="addImage" onClick={handleButtonClick} > + </button>
+                        <input type="file" ref={fileInputRef} className='input99' onChange={handleFileChange} />
                             <img className="img-first" src="./image/Casaco.png" alt="não carregou first image" />
                             <div className="img-group">
                                 <img src="./image/Casaco.png" alt="não carregou" />
@@ -65,7 +83,7 @@ export function Loja({ isOpen, setOpen }: IModal) {
 
                                 <div className="div-input-check">
                                     <input className="check-input" type="checkbox" name="" id="" />
-                                    <p>Colocar como disponivel ?</p>
+                                    <p>Tornar disponivel ?</p>
                                 </div>
                             </div>
                             
