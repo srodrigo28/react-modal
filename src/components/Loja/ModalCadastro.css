@@ -28,10 +28,10 @@
 }
 #fechar{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 110px;
+    right: 70px;
 
-    color: #777;
+    color: #fff;
     background-color: transparent;
     border: none;
 
@@ -200,16 +200,35 @@
         flex-direction: column;
         overflow-y: auto;
     }
+    #fechar{
+        position: absolute;
+        top: 200px;
+        left: 250px;
+    
+        color: #fff;
+        background-color: red;
+        border: none;
+    
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .9s;
+    }
     .product-image{
-        margin-top: 200px;
+        margin-top: 230px;
         width: 90vw;
     }
     .product-form{
         width: 90vw;
     }
     .check-input{
-        margin-left: -20px;
+        margin-left: -30px;
         height: 20px;
         width: 40px !important;
+    }
+    .div-input-check p{
+        padding-left: 5px;
+        padding-top: 20px;
     }
 }
