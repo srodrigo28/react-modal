@@ -14,10 +14,15 @@ export function Loja({ isOpen, setOpen }: IModal) {
 
                     <main className="main-container">
                         <section className="product-image">
-
+                            <img className="img-first" src="./image/Casaco.png" alt="não carregou first image" />
+                            <div className="img-group">
+                                <img src="./image/Casaco.png" alt="não carregou" />
+                                <img src="./image/Casaco.png" alt="não carregou" />
+                                <img src="./image/Casaco.png" alt="não carregou" />
+                            </div>
                         </section>
 
-                        <form>
+                        <form className="product-form">
                             <button id="fechar" onClick={() => setOpen(!isOpen)} > X </button>
 
                             <h3>Inserir produto ?</h3>
@@ -59,7 +64,6 @@ export function Loja({ isOpen, setOpen }: IModal) {
 
                                 <input type="text" />
                             </div>
-
                             
                             <button id="cadastrar">Cadastrar</button>
                         </form>
