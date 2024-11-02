@@ -13,7 +13,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-
     background-color: rgba(0,0,0,0.624);
 }
 
@@ -26,12 +25,7 @@
     color: #fff;
     padding: 4rem;
     border-radius: 8px;
-    background-color: red;
 }
-p{
-    margin-top: 20px;
-}
-
 #fechar{
     position: absolute;
     top: 0;
@@ -90,7 +84,6 @@ p{
     padding: 20px;
     width: 50%;
     height: 500px;
-    position: relative;
     border-radius: 10px;
     background-color: #1d1d1d;
 
@@ -163,15 +156,15 @@ p{
 @media screen and (max-width: 850px) {
     .main-container{
         margin-top: 100px;
-        height: 100%;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        overflow-y: scroll;
+        overflow-y: auto;
     }
     .product-image{
-        margin-top: 300px;
+        margin-top: 150px;
         width: 90vw;
     }
     .product-form{
