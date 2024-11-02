@@ -9,8 +9,7 @@ interface IModal {
 
 export function Loja( { isOpen, setOpen }: IModal) {
     
-    // const fileInputRef = useRef(null); // Usando useRef para referenciar o input
-       const fileInputRef = useRef<HTMLInputElement | null>(null);
+    const fileInputRef = useRef(null); // Usando useRef para referenciar o input
 
     // Função que dispara o clique no input file
     const handleButtonClick = (): void => {
@@ -18,10 +17,10 @@ export function Loja( { isOpen, setOpen }: IModal) {
     };
 
     // Função que lida com a seleção do arquivo
-    const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const file = event.target.files?.[0];
+    const handleFileChange = (event : any) => {
+        const file = event.target.files[0];
         if (file) {
-          alert(`Arquivo selecionado: ${file.name}`);
+        alert(`Salvando ... ${file.name}`);
         }
     };
 
