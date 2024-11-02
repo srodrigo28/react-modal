@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<body>
+    <header>
+        <div class="container-menu">
+            <p id="menu1" class="menu-feminino">Feminino</p>
+            <p id="menu2" class="menu-masculino">masculino</p>
+        </div>
+        <div class="item-feminino">
+            <p>Best Friday</p>
+            <p>Whats New</p>
+            <p>Marcas</p>
+            <p>Roupas</p>
+        </div>
+        <div class="item-masculino">
+
+        </div>
+    </header>
+
+   <style>
+     *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+        list-style: none;
+        text-decoration: none;
+    }
+    header{
+        display: flex;
+    }
+    .container-menu{
+        padding: 20px;
+        display: flex;
+    }
+    .container-menu p{
+        padding: 20px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1.8em;
+    }
+    .item-feminino{
+        display: flex;
+    }
+    .mark{
+        padding: 20px;
+        background-color: bisque;
+    }
+   </style>
+
+   <script>
+        var menu1 = document.getElementById('menu1')
+        var menu2 = document.getElementById('menu2')
+
+        menu1.onmouseover = function(){
+            menu1.style.background = "red"
+            menu1.style.color = "white"
+            
+            menu1.onmouseleave = function(){
+                document.location.reload()
+            }
+        }
+        menu2.onmouseenter = function(){
+            menu2.style.background = "red"
+            menu2.style.color = "white"
+            
+            menu2.onmouseleave = function(){
+                document.location.reload()
+            }
+        }
+   </script>
+</body>
+</html>

@@ -8,14 +8,20 @@
 <body>
     <header>
         <div class="container-menu">
-            <p id="menu1" class="menu-feminino">Feminino</p>
+            <p id="menu1" class="menu-feminino mark">Feminino</p>
             <p id="menu2" class="menu-masculino">masculino</p>
         </div>
-        <div class="item-feminino">
-
-        </div>
+        <ul class="item-feminino">
+            <li>Best Friday</li>
+            <li>Whats New</li>
+            <li>Marcas</li>
+            <li>Roupas</li>
+        </ul>
         <div class="item-masculino">
-
+            <p>Games</p>
+            <p>Futebol</p>
+            <p>Series</p>
+            <p>Estudos</p>
         </div>
     </header>
 
@@ -30,21 +36,42 @@
     }
     header{
         display: flex;
+        flex-direction: column;
     }
     .container-menu{
-        
-        padding: 20px;
+        height: 80px;
         display: flex;
+
+        transition: .3s;
     }
     .container-menu p{
         padding: 20px;
         cursor: pointer;
         font-weight: 600;
         font-size: 1.8em;
+        transition: .3s;
+        
+    }
+    .item-feminino, .item-masculino{
+        gap: 20px;
+        display: flex;
+        padding: 20px;
+        color: white;
+        font-size: 1.5em;
+        background-color: red;
+
+        transition: .3s;
+    }
+    .item-feminino p{
+        cursor: pointer;
+    }
+
+    .item-masculino p{
+        cursor: pointer;
     }
     .mark{
-        padding: 20px;
-        background-color: bisque;
+        color: white;
+        background-color: red;
     }
    </style>
 
@@ -55,18 +82,23 @@
         menu1.onmouseover = function(){
             menu1.style.background = "red"
             menu1.style.color = "white"
+
+            document.querySelector("#menu2").style.background = "transparent"
+            document.querySelector("#menu2").style.color = "black"
+            document.querySelector(".item-feminino").style.display = "flex"
+            document.querySelector(".item-masculino").style.display = "none"
             
-            menu1.onmouseleave = function(){
-                document.location.reload()
-            }
         }
-        menu2.onmouseenter = function(){
-            menu2.style.background = "red"
+        menu2.onmouseover = function(){
             menu2.style.color = "white"
+            menu2.style.background = "red"
+            document.querySelector(".item-masculino").style.display = "flex"
+
+            document.querySelector("#menu1").style.color = "black"
+            document.querySelector("#menu1").style.background = "transparent"
             
-            menu2.onmouseleave = function(){
-                document.location.reload()
-            }
+            document.querySelector(".item-feminino").style.display = "none"
+    
         }
    </script>
 </body>
