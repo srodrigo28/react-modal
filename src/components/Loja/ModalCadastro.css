@@ -48,6 +48,7 @@
     transform: rotate(180deg) scale(1.07); 
 }
 .main-container{
+    margin-top: 40px;
     width: 100vw;
     max-width: 1200px;
     min-width: 850px;
@@ -70,6 +71,23 @@
 .img-first{
     width: 50%;
 }
+#addImage{
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background-color: green;
+    transition: .9s;
+}
+#addImage:hover{
+    transform: scale(1.1) rotate(360deg);
+}
 .img-group{
     width: 100%;
     height: 140px;
@@ -91,7 +109,7 @@
     display: flex;
     flex-direction: column;
 }
-.product-form input, select, input::placeholder{
+.product-form input, select, input::placeholder, .div-input{
     padding: 15px;
     border: none;
     outline: none;
@@ -137,6 +155,8 @@
 }
 #cadastrar{
     width: 100%;
+    height: 40px;
+    margin-top: 40px;
     padding: 10px;
     border: none;
     outline: none;
@@ -145,14 +165,31 @@
     background-color: green;
     border-radius: 7px;
     transition: .9s;
-    opacity: .8;
+    opacity: .7;
 }
 #cadastrar:hover{
     opacity: 1;
+    font-size: 1.1em;
     color: #fff;
     font-weight: 500;
 }
-
+.div-input-check{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+.check-input{
+    margin-left: -80px;
+    height: 20px;
+    width: 40px !important;
+}
+.div-input-check p{
+    margin-left: -5px;
+    margin-bottom: 20px;
+}
 @media screen and (max-width: 850px) {
     .main-container{
         margin-top: 100px;
@@ -169,5 +206,10 @@
     }
     .product-form{
         width: 90vw;
+    }
+    .check-input{
+        margin-left: -20px;
+        height: 20px;
+        width: 40px !important;
     }
 }

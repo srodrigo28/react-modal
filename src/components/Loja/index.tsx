@@ -14,6 +14,7 @@ export function Loja({ isOpen, setOpen }: IModal) {
 
                     <main className="main-container">
                         <section className="product-image">
+                        <button id="addImage" > + </button>
                             <img className="img-first" src="./image/Casaco.png" alt="não carregou first image" />
                             <div className="img-group">
                                 <img src="./image/Casaco.png" alt="não carregou" />
@@ -62,7 +63,10 @@ export function Loja({ isOpen, setOpen }: IModal) {
                             <div className="btn-group"> 
                                 <input type="text" placeholder="R$ 700,00" />
 
-                                <input type="text" />
+                                <div className="div-input-check">
+                                    <input className="check-input" type="checkbox" name="" id="" />
+                                    <p>Colocar como disponivel ?</p>
+                                </div>
                             </div>
                             
                             <button id="cadastrar">Cadastrar</button>
